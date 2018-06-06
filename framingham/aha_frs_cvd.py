@@ -1,5 +1,5 @@
 import numpy as np
-import warnings
+
 #white women
 BETA_WOMEN_W = np.array([-29.799,        # natural log age ln age
                          4.884,          # ln age squared
@@ -8,27 +8,27 @@ BETA_WOMEN_W = np.array([-29.799,        # natural log age ln age
                         -13.578,         # Ln HDL–C
                          3.149,          # Ln Age×Ln
                          2.019,          # log treated systolic BP (mm Hg)
-                         0,         # log Age×log treated systolic BP
+                         0,              # log Age×log treated systolic BP
                          1.957,          # log untreated systolic BP
-                         0,         # log Age×log untreated systolic BP
+                         0,              # log Age×log untreated systolic BP
                          7.574,          # smoking (1=yes,0=no)
                          -1.665,         # log age× smoking
                          0.661           # diabets
 ])
 
-#african american women
+#African American women
 BETA_WOMEN_B = np.array([17.114,        # natrual log age ln age
-                         0,          # ln age squared
-                         0.94,         # ln total Cholesterol (mg/dL)
-                         0,          # Ln Age×Ln Total Cholesterol
+                         0,             # ln age squared
+                         0.94,          # ln total Cholesterol (mg/dL)
+                         0,              # Ln Age×Ln Total Cholesterol
                         -18.920,         # Ln HDL–C
                          4.475,          # Ln Age×Ln
-                         29.291,          # log treated systolic BP (mm Hg)
+                         29.291,         # log treated systolic BP (mm Hg)
                          -6.432,         # log Age×log treated systolic BP
                          27.82,          # log untreated systolic BP
                          -6.087,         # log Age×log untreated systolic BP
                          0.691,          # smoking (1=yes,0=no)
-                         0,         # log age× smoking
+                         0,              # log age× smoking
                          0.874           # diabets
 ])
 
@@ -41,11 +41,11 @@ BETA_MEN_W = np.array([12.344,        # natrual log age ln age
                          1.797,          # log treated systolic BP (mm Hg)
                          1.764,          # log untreated systolic BP
                          0.691,          # smoking (1=yes,0=no)
-                         0,         # log age× smoking
+                         0,              # log age× smoking
                          0.658           # diabets
 ])
 
-#white men
+#African American men
 BETA_MEN_B = np.array([2.469,        # natrual log age ln age
                          0.302,         # ln total Cholesterol (mg/dL)
                          0,          # Ln Age×Ln Total Cholesterol
