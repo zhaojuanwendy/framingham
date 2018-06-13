@@ -118,7 +118,7 @@ def frs(gender='F', age=55, tchol=213, hdlc=50, sbp=120, smoking=0, diab=0, ht_t
     else:
         raise ValueError('Gender must be specified as M or F')
 
-def estimiate_risk(ind_frs, mean_frs, gender='F',race='W'):
+def estimate_risk(ind_frs, mean_frs, gender='F', race='W'):
     if gender.upper() == 'F':
         if race.upper() == 'W':
             return 1 - np.power(SURV_WOMEN_W, np.exp(ind_frs-mean_frs))
@@ -142,39 +142,30 @@ if __name__ == '__main__':
     X = ['F', 55, 213, 50, 120, 0, 0, False, 'W', 10]
     score = frs(*X)
     print(score) #expected  -29.67
-    risk = estimiate_risk(score, mean_frs=-29.18, gender='F',race='W') #expected 0.021
+    risk = estimate_risk(score, mean_frs=-29.18, gender='F', race='W') #expected 0.021
     print(risk)
 
     X = ['M', 55, 213, 50, 120, 0, 0, False, 'W', 10]
     score = frs(*X)
     print(score)  # expected  60.69
-    risk = estimiate_risk(score, mean_frs=61.18, gender='M', race='W')  # expected 0.0053
+    risk = estimate_risk(score, mean_frs=61.18, gender='M', race='W')  # expected 0.0053
     print(risk)
 
    # score = frs(gender='F', age=55, tchol=213, hdlc=50, sbp=120, smoking=0, diab=0, ht_treat=False, race='W',time=10)
     X = ['F', 55, 213, 50, 120, 0, 0, False, 'B', 10]
     score = frs(*X)
     print(score) #expected  -29.67
-    risk = estimiate_risk(score, mean_frs=86.61, gender='F',race='B') #expected 0.021
+    risk = estimate_risk(score, mean_frs=86.61, gender='F', race='B') #expected 0.021
     print(risk)
 
     X = ['M', 55, 213, 50, 120, 0, 0, False, 'B', 10]
     score = frs(*X)
     print(score)  # expected  60.69
-    risk = estimiate_risk(score, mean_frs=19.54, gender='M', race='B')  # expected 0.0053
+    risk = estimate_risk(score, mean_frs=19.54, gender='M', race='B')  # expected 0.0053
     print(risk)
 
-    X = ['F', 68, 180, 90, 151, 0, 1, 352.0,'B',10]
-    score = frs(*X)
-    print(score)
-    risk = estimiate_risk(score, mean_frs=86.61, gender='F', race='B')  # expected 0.021
-    print(risk)
 
-    X = ['F', 68, 180, 90, 151, 0, 1, False, 'B', 10]
-    score = frs(*X)
-    print(score)
-    risk = estimiate_risk(score, mean_frs=86.61, gender='F', race='B')  # expected 0.021
-    print(risk)
+
 
 
 
