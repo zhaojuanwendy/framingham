@@ -23,7 +23,7 @@ mean_frs is the mean frs score of the race and sex group, it can be retrived fro
 * African American women, 86.61
 * African American mean, 19.54
 
-# lower risk threshold
+# Lower risk threshold
 The lower risk threshold recommended by ACC/AHA is 7.5%.
 For implementation, the risk score produced by estimate_risk() is less than 7.5% is low risk of CVD.
 
