@@ -1,4 +1,4 @@
-# Framingham Risk Score -  Pooled Cohort ASCVD Risk Equations from 2013 American College of Cardiology and American Heart Association (ACC/AHA) Guideline on the Assessment of Cardiovascular Risk (CVD).
+# Pooled Cohort ASCVD Risk Equations from 2013 American College of Cardiology and American Heart Association (ACC/AHA) Guideline on the Assessment of Cardiovascular Risk (CVD).
 
 # Installation
 ```
